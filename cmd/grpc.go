@@ -15,6 +15,7 @@ func ServeGRPC() {
 	dependency := dependencyInject()
 
 	s := grpc.NewServer()
+
 	// list method
 	tokenvalidation.RegisterTokenValidationServer(s, dependency.TokenValidationAPI)
 

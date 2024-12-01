@@ -4,7 +4,7 @@ import (
 	"ewallet-ums/helpers"
 	"ewallet-ums/internal/api"
 	"ewallet-ums/internal/interfaces"
-	"ewallet-ums/internal/reposistory"
+	"ewallet-ums/internal/repository"
 	"ewallet-ums/internal/services"
 	"log"
 
@@ -49,7 +49,7 @@ func dependencyInject() Dependency {
 		HealthcheckServices: healthcheckSvc,
 	}
 
-	userRepo := &reposistory.UserRepository{
+	userRepo := &repository.UserRepository{
 		DB: helpers.DB,
 	}
 

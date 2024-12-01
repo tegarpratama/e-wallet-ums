@@ -1,10 +1,9 @@
-package reposistory
+package repository
 
 import (
 	"context"
 	"errors"
 	"ewallet-ums/internal/models"
-	"log"
 
 	"gorm.io/gorm"
 )
@@ -48,7 +47,6 @@ func (r *UserRepository) UpdateTokenByRefreshToken(ctx context.Context, token, r
 }
 
 func (r *UserRepository) GetUserSessionByToken(ctx context.Context, token string) (models.UserSession, error) {
-	log.Println("REPOSITORY EXECUTED")
 	var (
 		session models.UserSession
 		err     error
